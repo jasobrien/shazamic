@@ -4,10 +4,10 @@ export const PRICE_BANDS = [
   { id: "premium", label: "Premium", range: "$261+" }
 ];
 
-export const headphones = [
+export const overEar = [
   {
     id: "sndcore-space-one",
-    category: "headphones",
+    category: "over-ear",
     name: "Soundcore Space One",
     priceBand: "budget",
     rank: 1,
@@ -36,7 +36,7 @@ export const headphones = [
   },
   {
     id: "jbl-live-660nc",
-    category: "headphones",
+    category: "over-ear",
     name: "JBL Live 660NC",
     priceBand: "budget",
     rank: 2,
@@ -65,7 +65,7 @@ export const headphones = [
   },
   {
     id: "1more-sonoflow",
-    category: "headphones",
+    category: "over-ear",
     name: "1More SonoFlow",
     priceBand: "budget",
     rank: 3,
@@ -94,7 +94,7 @@ export const headphones = [
   },
   {
     id: "sony-ch720n",
-    category: "headphones",
+    category: "over-ear",
     name: "Sony CH720N",
     priceBand: "budget",
     rank: 4,
@@ -123,7 +123,7 @@ export const headphones = [
   },
   {
     id: "edifier-wh950nb",
-    category: "headphones",
+    category: "over-ear",
     name: "Edifier WH950NB",
     priceBand: "budget",
     rank: 5,
@@ -152,7 +152,7 @@ export const headphones = [
   },
   {
     id: "sony-wh1000xm4",
-    category: "headphones",
+    category: "over-ear",
     name: "Sony WH-1000XM4",
     priceBand: "mid",
     rank: 1,
@@ -181,7 +181,7 @@ export const headphones = [
   },
   {
     id: "beats-studio-pro",
-    category: "headphones",
+    category: "over-ear",
     name: "Beats Studio Pro",
     priceBand: "mid",
     rank: 2,
@@ -210,7 +210,7 @@ export const headphones = [
   },
   {
     id: "bose-qc",
-    category: "headphones",
+    category: "over-ear",
     name: "Bose QuietComfort",
     priceBand: "mid",
     rank: 3,
@@ -239,7 +239,7 @@ export const headphones = [
   },
   {
     id: "sennheiser-momentum-4",
-    category: "headphones",
+    category: "over-ear",
     name: "Sennheiser Momentum 4",
     priceBand: "mid",
     rank: 4,
@@ -262,13 +262,13 @@ export const headphones = [
       "Excellent for listeners who prioritize fidelity but still want practical wireless features.",
     affiliate: {
       retailer: "Amazon",
-      url: "https://www.amazon.com/dp/B0B6F5WQ2Y?tag=ardeevin-22",
+      url: "https://www.amazon.com/dp/B0BJS17PCG?tag=ardeevin-22",
       associateTag: "ardeevin-22"
     }
   },
   {
     id: "technics-a800",
-    category: "headphones",
+    category: "over-ear",
     name: "Technics EAH-A800",
     priceBand: "mid",
     rank: 5,
@@ -297,7 +297,7 @@ export const headphones = [
   },
   {
     id: "sony-wh1000xm5",
-    category: "headphones",
+    category: "over-ear",
     name: "Sony WH-1000XM5",
     priceBand: "premium",
     rank: 1,
@@ -326,7 +326,7 @@ export const headphones = [
   },
   {
     id: "airpods-max",
-    category: "headphones",
+    category: "over-ear",
     name: "Apple AirPods Max",
     priceBand: "premium",
     rank: 2,
@@ -355,7 +355,7 @@ export const headphones = [
   },
   {
     id: "bowers-px8",
-    category: "headphones",
+    category: "over-ear",
     name: "Bowers & Wilkins Px8",
     priceBand: "premium",
     rank: 3,
@@ -384,7 +384,7 @@ export const headphones = [
   },
   {
     id: "focal-bathys",
-    category: "headphones",
+    category: "over-ear",
     name: "Focal Bathys",
     priceBand: "premium",
     rank: 4,
@@ -413,7 +413,7 @@ export const headphones = [
   },
   {
     id: "bang-olufsen-h95",
-    category: "headphones",
+    category: "over-ear",
     name: "Bang & Olufsen Beoplay H95",
     priceBand: "premium",
     rank: 5,

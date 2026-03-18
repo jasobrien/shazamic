@@ -53,10 +53,6 @@ function ProductCard({ product }) {
           View on Amazon
         </a>
       </footer>
-      <p className="disclaimer-inline">
-        Affiliate disclosure: We may earn a commission from Amazon purchases at no extra
-        cost to you.
-      </p>
     </article>
   );
 }

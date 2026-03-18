@@ -20,9 +20,8 @@ function App() {
       </Routes>
       <footer className="site-footer">
         <p>Shazamic - Compare. Choose. Done.</p>
-        <p>
-          We may earn commissions through Amazon Associates links. Rankings are produced using
-          published methodology criteria.
+        <p className="affiliate-disclosure">
+          Affiliate disclosure: We may earn a commission from Amazon purchases at no extra cost to you.
         </p>
       </footer>
     </div>
