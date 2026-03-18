@@ -30,8 +30,8 @@ export const headphones = [
       "Our favorite budget pick for commuters who need quiet and all-day wear.",
     affiliate: {
       retailer: "Amazon",
-      url: "https://www.amazon.com/dp/B0C6FQG5Z3?tag=shazamic-20",
-      associateTag: "shazamic-20"
+      url: "https://www.amazon.com/dp/B0C6FQG5Z3?tag=ardeevin-22",
+      associateTag: "ardeevin-22"
     }
   },
   {
@@ -59,8 +59,8 @@ export const headphones = [
       "A dependable pick when energetic sound is more important than total noise isolation.",
     affiliate: {
       retailer: "Amazon",
-      url: "https://www.amazon.com/dp/B08WM3LMJF?tag=shazamic-20",
-      associateTag: "shazamic-20"
+      url: "https://www.amazon.com/dp/B08WM3LMJF?tag=ardeevin-22",
+      associateTag: "ardeevin-22"
     }
   },
   {
@@ -88,8 +88,8 @@ export const headphones = [
       "A practical and surprisingly balanced option for flights and daily commuting.",
     affiliate: {
       retailer: "Amazon",
-      url: "https://www.amazon.com/dp/B0B87MQG2N?tag=shazamic-20",
-      associateTag: "shazamic-20"
+      url: "https://www.amazon.com/dp/B0B87MQG2N?tag=ardeevin-22",
+      associateTag: "ardeevin-22"
     }
   },
   {
@@ -117,8 +117,8 @@ export const headphones = [
       "High comfort and stable wireless performance make this a safe all-rounder.",
     affiliate: {
       retailer: "Amazon",
-      url: "https://www.amazon.com/dp/B0BS1QCFHX?tag=shazamic-20",
-      associateTag: "shazamic-20"
+      url: "https://www.amazon.com/dp/B0BS1QCFHX?tag=ardeevin-22",
+      associateTag: "ardeevin-22"
     }
   },
   {
@@ -146,8 +146,8 @@ export const headphones = [
       "Feature-rich choice for listeners who care about codecs and included accessories.",
     affiliate: {
       retailer: "Amazon",
-      url: "https://www.amazon.com/dp/B0BBM6P6N1?tag=shazamic-20",
-      associateTag: "shazamic-20"
+      url: "https://www.amazon.com/dp/B0BBM6P6N1?tag=ardeevin-22",
+      associateTag: "ardeevin-22"
     }
   },
   {
@@ -175,8 +175,8 @@ export const headphones = [
       "Still one of the safest premium-adjacent buys thanks to mature firmware and consistency.",
     affiliate: {
       retailer: "Amazon",
-      url: "https://www.amazon.com/dp/B0863TXGM3?tag=shazamic-20",
-      associateTag: "shazamic-20"
+      url: "https://www.amazon.com/dp/B0863TXGM3?tag=ardeevin-22",
+      associateTag: "ardeevin-22"
     }
   },
   {
@@ -204,8 +204,8 @@ export const headphones = [
       "A strong cross-platform choice for users who swap between iPhone and Windows.",
     affiliate: {
       retailer: "Amazon",
-      url: "https://www.amazon.com/dp/B0C8Z4SV1S?tag=shazamic-20",
-      associateTag: "shazamic-20"
+      url: "https://www.amazon.com/dp/B0C8Z4SV1S?tag=ardeevin-22",
+      associateTag: "ardeevin-22"
     }
   },
   {
@@ -233,8 +233,8 @@ export const headphones = [
       "If comfort is non-negotiable, this model remains one of the safest recommendations.",
     affiliate: {
       retailer: "Amazon",
-      url: "https://www.amazon.com/dp/B0CCZ26B5V?tag=shazamic-20",
-      associateTag: "shazamic-20"
+      url: "https://www.amazon.com/dp/B0CCZ26B5V?tag=ardeevin-22",
+      associateTag: "ardeevin-22"
     }
   },
   {
@@ -262,8 +262,8 @@ export const headphones = [
       "Excellent for listeners who prioritize fidelity but still want practical wireless features.",
     affiliate: {
       retailer: "Amazon",
-      url: "https://www.amazon.com/dp/B0B6F5WQ2Y?tag=shazamic-20",
-      associateTag: "shazamic-20"
+      url: "https://www.amazon.com/dp/B0B6F5WQ2Y?tag=ardeevin-22",
+      associateTag: "ardeevin-22"
     }
   },
   {
@@ -291,8 +291,8 @@ export const headphones = [
       "A stable recommendation for buyers who dislike heavily boosted consumer tuning.",
     affiliate: {
       retailer: "Amazon",
-      url: "https://www.amazon.com/dp/B09R1M7Q3L?tag=shazamic-20",
-      associateTag: "shazamic-20"
+      url: "https://www.amazon.com/dp/B09R1M7Q3L?tag=ardeevin-22",
+      associateTag: "ardeevin-22"
     }
   },
   {
@@ -320,8 +320,8 @@ export const headphones = [
       "The most consistent premium recommendation across office, commute, and travel scenarios.",
     affiliate: {
       retailer: "Amazon",
-      url: "https://www.amazon.com/dp/B09XSDMT4F?tag=shazamic-20",
-      associateTag: "shazamic-20"
+      url: "https://www.amazon.com/dp/B09XSDMT4F?tag=ardeevin-22",
+      associateTag: "ardeevin-22"
     }
   },
   {
@@ -349,8 +349,8 @@ export const headphones = [
       "Exceptional integration and transparency mode, but only worth it for deep Apple users.",
     affiliate: {
       retailer: "Amazon",
-      url: "https://www.amazon.com/dp/B08PZHYWJS?tag=shazamic-20",
-      associateTag: "shazamic-20"
+      url: "https://www.amazon.com/dp/B08PZHYWJS?tag=ardeevin-22",
+      associateTag: "ardeevin-22"
     }
   },
   {
@@ -378,8 +378,8 @@ export const headphones = [
       "A boutique premium pick focused on craft and musicality over pure ANC value.",
     affiliate: {
       retailer: "Amazon",
-      url: "https://www.amazon.com/dp/B0BGQ5K1FG?tag=shazamic-20",
-      associateTag: "shazamic-20"
+      url: "https://www.amazon.com/dp/B0BGQ5K1FG?tag=ardeevin-22",
+      associateTag: "ardeevin-22"
     }
   },
   {
@@ -407,8 +407,8 @@ export const headphones = [
       "A niche premium option for buyers prioritizing top-end sound quality.",
     affiliate: {
       retailer: "Amazon",
-      url: "https://www.amazon.com/dp/B0BFXPM2Y5?tag=shazamic-20",
-      associateTag: "shazamic-20"
+      url: "https://www.amazon.com/dp/B0BFXPM2Y5?tag=ardeevin-22",
+      associateTag: "ardeevin-22"
     }
   },
   {
@@ -436,8 +436,8 @@ export const headphones = [
       "A prestige pick where craftsmanship is part of the product value proposition.",
     affiliate: {
       retailer: "Amazon",
-      url: "https://www.amazon.com/dp/B08HTYL5Q6?tag=shazamic-20",
-      associateTag: "shazamic-20"
+      url: "https://www.amazon.com/dp/B08HTYL5Q6?tag=ardeevin-22",
+      associateTag: "ardeevin-22"
     }
   }
 ];
