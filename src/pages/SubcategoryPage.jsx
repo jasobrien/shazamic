@@ -1,32 +1,32 @@
 import { useMemo, useState } from "react";
 import PriceBandTabs from "../components/PriceBandTabs";
 import ProductCard from "../components/ProductCard";
-import { headphones, rubric } from "../data/headphones";
 
-function HeadphonesPage() {
-  const [activeBand, setActiveBand] = useState("budget");
+function SubcategoryPage({ title, description, products, priceBands, rubric }) {
+  const [activeBand, setActiveBand] = useState(priceBands[0].id);
 
   const visibleProducts = useMemo(
     () =>
-      headphones
+      products
         .filter((item) => item.priceBand === activeBand)
         .sort((a, b) => a.rank - b.rank)
         .slice(0, 5),
-    [activeBand]
+    [activeBand, products]
   );
 
   return (
     <main>
       <section className="page-hero">
         <p className="eyebrow">Headphones</p>
-        <h1>Smart comparisons, fast decisions</h1>
-        <p>
-          Browse dependable top-5 recommendations by price range. Every card shows scoring,
-          trade-offs, and a direct Amazon purchase link.
-        </p>
+        <h1>{title}</h1>
+        <p>{description}</p>
       </section>
 
-      <PriceBandTabs activeBand={activeBand} onBandChange={setActiveBand} />
+      <PriceBandTabs
+        bands={priceBands}
+        activeBand={activeBand}
+        onBandChange={setActiveBand}
+      />
 
       <section className="list-meta">
         <p>Showing the top 5 picks in this price band, sorted by overall recommendation rank.</p>
@@ -50,4 +50,4 @@ function HeadphonesPage() {
   );
 }
 
-export default HeadphonesPage;
+export default SubcategoryPage;

@@ -1,9 +1,7 @@
-import { PRICE_BANDS } from "../data/headphones";
-
-function PriceBandTabs({ activeBand, onBandChange }) {
+function PriceBandTabs({ bands, activeBand, onBandChange }) {
   return (
     <div className="tabs" role="tablist" aria-label="Price band selection">
-      {PRICE_BANDS.map((band) => {
+      {bands.map((band) => {
         const active = band.id === activeBand;
         return (
           <button
