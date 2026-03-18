@@ -1,49 +1,64 @@
 <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="12" y1="8" x2="118" y2="124" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0C446F" />
-      <stop offset="1" stop-color="#0E7665" />
+    <!-- Vibrant electric blue → teal background -->
+    <linearGradient id="bg" x1="4" y1="4" x2="124" y2="124" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D4ED8" />
+      <stop offset="0.52" stop-color="#0284C7" />
+      <stop offset="1" stop-color="#0D9488" />
     </linearGradient>
-    <radialGradient id="aura" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(90 22) rotate(128) scale(88)">
-      <stop stop-color="#A3F5FF" stop-opacity="0.3" />
-      <stop offset="1" stop-color="#A3F5FF" stop-opacity="0" />
+    <!-- Shine overlay, top-left -->
+    <radialGradient id="shine" cx="30%" cy="22%" r="55%">
+      <stop stop-color="#FFFFFF" stop-opacity="0.2" />
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
     </radialGradient>
-    <linearGradient id="lamp" x1="34" y1="66" x2="97" y2="97" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFD08A" />
-      <stop offset="1" stop-color="#E7A04A" />
+    <!-- S letterform gradient: bright white → electric cyan -->
+    <linearGradient id="s-grad" x1="44" y1="26" x2="84" y2="106" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" />
+      <stop offset="1" stop-color="#7DD3FC" />
+    </linearGradient>
+    <!-- Glow filter for the S -->
+    <filter id="sglow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <!-- Gold bolt gradient -->
+    <linearGradient id="bolt-grad" x1="90" y1="18" x2="106" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FDE047" />
+      <stop offset="1" stop-color="#F59E0B" />
     </linearGradient>
   </defs>
 
+  <!-- Rounded square base -->
   <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#bg)" />
-  <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#aura)" />
+  <!-- Subtle shine -->
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#shine)" />
 
+  <!-- Bold italic S — forward lean baked into coords (top biased right, bottom biased left) -->
   <path
-    d="M80 34C74 28 60 28 54 34C48 40 51 48 59 51L71 55C78 57 80 64 74 69C68 75 55 75 48 70"
-    stroke="#EAFBFF"
-    stroke-width="9"
+    d="M81 33C76 26 62 24 52 28C42 32 37 41 41 50C44 57 53 61 65 65C77 69 83 74 82 83C81 92 70 97 58 96C47 95 39 88 36 82"
+    stroke="url(#s-grad)"
+    stroke-width="12.5"
     stroke-linecap="round"
     stroke-linejoin="round"
+    fill="none"
+    filter="url(#sglow)"
   />
 
+  <!-- Speed-slash underline on the S tail — implies instant delivery -->
   <path
-    d="M36 82C36 73 46 67 61 67H73C87 67 97 73 97 82C97 90 87 96 73 96H61C46 96 36 90 36 82Z"
-    fill="url(#lamp)"
-  />
-
-  <path
-    d="M78 74C86 70 95 70 103 74L95 80C90 84 85 86 79 86"
-    fill="#E4A258"
-  />
-
-  <path
-    d="M45 89H85"
-    stroke="#CB8437"
+    d="M36 82 L50 88"
+    stroke="#7DD3FC"
     stroke-width="4"
     stroke-linecap="round"
+    opacity="0.6"
   />
 
+  <!-- Lightning bolt — top-right quality/speed badge -->
   <path
-    d="M93 32L95 37L100 39L95 41L93 46L91 41L86 39L91 37L93 32Z"
-    fill="#FFE8A9"
+    d="M101 19 L90 36 L97 36 L89 49 L106 30 L99 30 Z"
+    fill="url(#bolt-grad)"
   />
 </svg>

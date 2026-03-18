@@ -79,22 +79,29 @@ a {
 }
 
 .brand-logo {
-  width: 2.2rem;
-  height: 2.2rem;
-  border-radius: 10px;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 13px;
   display: block;
-  box-shadow: 0 6px 14px rgba(10, 40, 52, 0.22);
+  box-shadow: 0 6px 20px rgba(13, 78, 216, 0.35), 0 2px 6px rgba(13, 148, 136, 0.25);
 }
 
 .brand-name {
   margin: 0;
-  font-weight: 700;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+  background: linear-gradient(125deg, #0d4ed8 0%, #0284c7 55%, #0d9488 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .brand-subtitle {
   margin: 0;
   color: var(--muted);
-  font-size: 0.86rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.01em;
 }
 
 .main-nav {
