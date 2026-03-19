@@ -21,26 +21,28 @@ function Header() {
   return (
     <>
       <header className="site-header">
-        <div className="brand-block">
-          <img className="brand-logo" src="/shazamic-logo.svg" alt="Shazamic logo" />
-          <div>
-            <p className="brand-name">Shazamic</p>
-            <p className="brand-subtitle">Find the best products instantly</p>
+        <div className="header-top-row">
+          <div className="brand-block">
+            <img className="brand-logo" src="/shazamic-logo.svg" alt="Shazamic logo" />
+            <div>
+              <p className="brand-name">Shazamic</p>
+              <p className="brand-subtitle">Find the best products instantly</p>
+            </div>
           </div>
+          <button
+            type="button"
+            className="header-search-btn"
+            onClick={() => setSearchOpen(true)}
+            aria-label="Search lists and products"
+          >
+            <span aria-hidden="true">⌕</span>
+            <span className="header-search-hint">Search</span>
+            <kbd>⌘K</kbd>
+          </button>
         </div>
         <nav className="main-nav" aria-label="Primary">
           <MegaMenu />
         </nav>
-        <button
-          type="button"
-          className="header-search-btn"
-          onClick={() => setSearchOpen(true)}
-          aria-label="Search lists and products"
-        >
-          <span aria-hidden="true">⌕</span>
-          <span className="header-search-hint">Search</span>
-          <kbd>⌘K</kbd>
-        </button>
       </header>
       {searchOpen && <SearchModal onClose={() => setSearchOpen(false)} />}
     </>
