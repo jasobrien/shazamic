@@ -71,7 +71,6 @@ a {
   box-shadow: var(--shadow);
   position: relative;
   z-index: 200;
-  overflow: hidden;
 }
 
 .header-top-row {
@@ -122,6 +121,7 @@ a {
   border-top: 1px solid var(--line);
   padding: 0.35rem 0.75rem;
   background: rgba(245, 248, 247, 0.55);
+  border-radius: 0 0 20px 20px;
 }
 
 .main-nav a {
@@ -579,171 +579,163 @@ h1 {
 
 .product-list {
   display: grid;
-  gap: 0.5rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.65rem;
+  align-items: start;
 }
 
-.card-row {
-  padding: 0;
-  overflow: hidden;
-  animation: fade-in 0.45s ease both;
+/* ── Column comparison card ── */
+
+.card-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0.9rem 0.75rem;
+  animation: fade-in 0.35s ease both;
 }
 
-.card-row-summary {
-  display: grid;
-  grid-template-columns: 2.2rem minmax(0, 1.6fr) minmax(0, 1.4fr) auto auto 2rem;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.7rem 0.85rem;
-  cursor: pointer;
-  transition: background 0.12s;
-}
-
-.card-row-summary:hover {
-  background: rgba(14, 123, 115, 0.04);
-}
-
-.card-row-rank {
+.card-col-rank {
   font-weight: 800;
-  font-size: 1.1rem;
+  font-size: 1.35rem;
   color: var(--accent);
+  text-align: center;
+  line-height: 1;
+}
+
+.card-col-identity h3 {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.3;
   text-align: center;
 }
 
-.card-row-identity h3 {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.25;
+.card-col-identity .best-for {
+  margin: 0.25rem 0 0;
+  font-size: 0.75rem;
+  text-align: center;
+  color: var(--muted);
 }
 
-.card-row-identity .best-for {
-  margin: 0.15rem 0 0;
-  font-size: 0.82rem;
+.card-col-scores {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.35rem;
 }
 
-.card-row-scores {
-  display: flex;
-  gap: 0.4rem;
-  flex-wrap: wrap;
-}
-
-.card-row-score {
+.card-col-score {
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 1px solid var(--line);
   border-radius: 10px;
-  padding: 0.25rem 0.45rem;
+  padding: 0.3rem 0.2rem;
   background: #f7faf9;
-  min-width: 3.2rem;
 }
 
-.card-row-score .score-label {
-  font-size: 0.62rem;
+.card-col-score .score-label {
+  font-size: 0.58rem;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   color: var(--muted);
   font-weight: 600;
 }
 
-.card-row-score .score-value {
-  font-size: 1rem;
+.card-col-score .score-value {
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--ink);
   line-height: 1.2;
 }
 
-.card-row-price-col {
-  text-align: right;
-  white-space: nowrap;
+.card-col-price {
+  text-align: center;
+  border-top: 1px solid var(--line);
+  padding-top: 0.5rem;
 }
 
-.card-row-price-col .price {
+.card-col-price .price {
   margin: 0;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 700;
 }
 
-.card-row-price-col .rating {
+.card-col-price .rating {
   margin: 0;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   color: var(--muted);
 }
 
-.card-row-price-col .confidence {
+.card-col-price .confidence {
   margin: 0;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 600;
 }
 
-.confidence-high {
-  color: #0f6b4c;
+.card-col-cta {
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem 0.5rem;
+  font-size: 0.78rem;
 }
 
-.confidence-medium {
-  color: #815800;
-}
-
-.confidence-low {
-  color: #8a3c2b;
-}
-
-.card-row-cta {
-  padding: 0.45rem 0.85rem;
-  font-size: 0.82rem;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.card-row-toggle {
+.card-col-toggle {
   background: none;
-  border: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
   cursor: pointer;
   color: var(--muted);
-  font-size: 0.7rem;
-  padding: 0.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font: inherit;
+  font-size: 0.72rem;
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+  transition: border-color 0.12s, color 0.12s;
 }
 
-.card-row-details {
+.card-col-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.card-col.is-expanded {
+  border-color: #8bc8bc;
+}
+
+.card-col-details {
   border-top: 1px solid var(--line);
-  padding: 0.85rem 1rem;
+  padding-top: 0.6rem;
   animation: fade-in 0.2s ease both;
 }
 
-.card-row-details .editor-note {
-  margin: 0 0 0.7rem;
+.card-col-details .editor-note {
+  margin: 0 0 0.5rem;
+  font-size: 0.78rem;
   color: var(--muted);
+  line-height: 1.45;
 }
 
-.card-row-details .pros-cons {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+.card-col-pros h4,
+.card-col-cons h4 {
+  margin: 0 0 0.2rem;
+  font-size: 0.82rem;
 }
 
-.card-row-details .pros-cons h4 {
-  margin: 0;
-  font-size: 0.92rem;
-}
-
-.card-row-details .pros-cons ul {
-  margin: 0.3rem 0 0;
-  padding-left: 1rem;
+.card-col-pros ul,
+.card-col-cons ul {
+  margin: 0 0 0.5rem;
+  padding-left: 0.9rem;
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 0.76rem;
 }
 
-.card-row-meta {
-  margin: 0.7rem 0 0;
+.card-col-meta {
+  margin: 0.4rem 0 0;
   color: var(--muted);
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
-.card-row.is-expanded {
-  border-color: #8bc8bc;
-}
+.confidence-high { color: #0f6b4c; }
+.confidence-medium { color: #815800; }
+.confidence-low { color: #8a3c2b; }
 
 .best-for {
   margin: 0;
@@ -1029,34 +1021,8 @@ h1 {
     grid-template-columns: 1fr;
   }
 
-  .card-row-summary {
-    grid-template-columns: 2rem 1fr auto auto;
-    grid-template-rows: auto auto auto;
-    gap: 0.4rem 0.6rem;
-  }
-
-  .card-row-rank {
-    grid-row: 1 / 3;
-  }
-
-  .card-row-identity {
-    grid-column: 2 / -1;
-  }
-
-  .card-row-scores {
-    grid-column: 2 / -1;
-  }
-
-  .card-row-price-col {
-    text-align: left;
-  }
-
-  .card-row-toggle {
-    grid-row: 1;
-  }
-
-  .card-row-details .pros-cons {
-    grid-template-columns: 1fr;
+  .product-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -1078,18 +1044,8 @@ h1 {
     background: #f2f4f5;
   }
 
-  .card-row-scores {
-    gap: 0.3rem;
-  }
-
-  .card-row-score {
-    min-width: 2.6rem;
-    padding: 0.2rem 0.35rem;
-  }
-
-  .card-row-cta {
-    padding: 0.35rem 0.65rem;
-    font-size: 0.78rem;
+  .product-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
