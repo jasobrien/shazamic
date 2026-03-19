@@ -10,8 +10,8 @@
 export const featureFlags = {
   groups: {
     personal: true,
-    kitchen: false,
-    common: false,
+    kitchen: true,
+    common: true,
   },
 
   categories: {

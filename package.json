@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:links": "node scripts/check-links.js",
+    "test:links:structure-only": "node scripts/check-links.js --no-http"
   },
   "dependencies": {
     "react": "^18.3.1",

@@ -22,7 +22,7 @@ export const guideCards = [
     title: "The 10-minute electronics buying checklist",
     summary: "Use this checklist before every purchase to avoid overpaying for specs.",
     updatedOn: "Mar 14, 2026",
-    path: "/methodology"
+    path: "/headphones"
   },
   {
     title: "Are premium audio codecs worth it?",
@@ -34,7 +34,7 @@ export const guideCards = [
     title: "How we verify electronics reliability",
     summary: "Our approach to long-term reliability signals and owner feedback patterns.",
     updatedOn: "Mar 11, 2026",
-    path: "/methodology"
+    path: "/headphones"
   }
 ];
 

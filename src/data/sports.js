@@ -145,7 +145,7 @@ export const sports = [
       "Military-grade durability with excellent ANC — the best mid-range sport earbud available.",
     affiliate: {
       retailer: "Amazon",
-      url: "https://www.amazon.com/dp/B0DCYWVS77?tag=ardeevin-22",
+      url: "https://www.amazon.com/s?k=Jabra+Elite+8+Active+Gen+2&tag=ardeevin-22",
       associateTag: "ardeevin-22"
     }
   },

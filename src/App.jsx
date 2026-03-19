@@ -7,14 +7,12 @@ function ScrollToTop() {
   return null;
 }
 import Header from "./components/Header";
-import DisclosurePage from "./pages/DisclosurePage";
 import HeadphonesHub from "./pages/HeadphonesHub";
 import SmartphonesHub from "./pages/SmartphonesHub";
 import LaptopsHub from "./pages/LaptopsHub";
 import GamingGearHub from "./pages/GamingGearHub";
 import GroupHub from "./pages/GroupHub";
 import HomePage from "./pages/HomePage";
-import MethodologyPage from "./pages/MethodologyPage";
 import SubcategoryPage from "./pages/SubcategoryPage";
 import { overEar, PRICE_BANDS as overEarBands, rubric as overEarRubric } from "./data/overEar";
 import { inEar, PRICE_BANDS as inEarBands, rubric as inEarRubric } from "./data/inEar";
@@ -209,8 +207,6 @@ function App() {
           }
         />
 
-        <Route path="/methodology" element={<MethodologyPage />} />
-        <Route path="/disclosure" element={<DisclosurePage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <footer className="site-footer">

@@ -30,8 +30,6 @@ function Header() {
         </div>
         <nav className="main-nav" aria-label="Primary">
           <MegaMenu />
-          <NavLink to="/methodology">Methodology</NavLink>
-          <NavLink to="/disclosure">Disclosure</NavLink>
         </nav>
         <button
           type="button"
