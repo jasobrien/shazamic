@@ -172,7 +172,7 @@ export const laptopsMacBook = [
       "If Premiere, DaVinci, Logic, or Xcode are your main tools for hours daily, the M4 Pro's chip ceiling pays for itself in export speed and thermal headroom.",
     affiliate: {
       retailer: "Amazon",
-      url: "https://www.amazon.com/s?k=MacBook+Pro+14%5C&tag=ardeevin-22",
+      url: "https://www.amazon.com/s?k=MacBook+Pro+14+inch+M4+Pro&tag=ardeevin-22",
       associateTag: "ardeevin-22"
     }
   },
@@ -196,7 +196,7 @@ export const laptopsMacBook = [
       "The 24GB M4 Pro configuration resolves memory pressure for machine learning workflows and huge Photoshop documents — buy it if you hit RAM limits regularly.",
     affiliate: {
       retailer: "Amazon",
-      url: "https://www.amazon.com/s?k=MacBook+Pro+14%5C&tag=ardeevin-22",
+      url: "https://www.amazon.com/s?k=MacBook+Pro+14+inch+M4+Pro+24GB&tag=ardeevin-22",
       associateTag: "ardeevin-22"
     }
   },
@@ -244,7 +244,7 @@ export const laptopsMacBook = [
       "The M4 Max in a 14\" body is for professionals who need workstation-class GPU performance on the go — most buyers should step down to M4 Pro.",
     affiliate: {
       retailer: "Amazon",
-      url: "https://www.amazon.com/s?k=MacBook+Pro+14%5C&tag=ardeevin-22",
+      url: "https://www.amazon.com/s?k=MacBook+Pro+14+inch+M4+Max&tag=ardeevin-22",
       associateTag: "ardeevin-22"
     }
   },
@@ -270,7 +270,7 @@ export const laptopsMacBook = [
       "The 16\" Pro is the desk-replacement MacBook — its display and speakers rival standalone monitors and speakers at a scale that rewards the extra weight.",
     affiliate: {
       retailer: "Amazon",
-      url: "https://www.amazon.com/s?k=MacBook+Pro+16%5C&tag=ardeevin-22",
+      url: "https://www.amazon.com/s?k=MacBook+Pro+16+inch+M4+Pro&tag=ardeevin-22",
       associateTag: "ardeevin-22"
     }
   },
@@ -294,7 +294,7 @@ export const laptopsMacBook = [
       "The M4 Max 16\" sets the absolute ceiling for laptop performance in 2026 — justified for 3D artists, ML engineers, and video professionals who live in render queues.",
     affiliate: {
       retailer: "Amazon",
-      url: "https://www.amazon.com/s?k=MacBook+Pro+16%5C&tag=ardeevin-22",
+      url: "https://www.amazon.com/s?k=MacBook+Pro+16+inch+M4+Max&tag=ardeevin-22",
       associateTag: "ardeevin-22"
     }
   },
@@ -342,7 +342,7 @@ export const laptopsMacBook = [
       "This configuration is for AI researchers and ML engineers who need to run large models locally without quantization. A remarkable machine with a remarkably narrow audience.",
     affiliate: {
       retailer: "Amazon",
-      url: "https://www.amazon.com/s?k=MacBook+Pro+16%5C&tag=ardeevin-22",
+      url: "https://www.amazon.com/s?k=MacBook+Pro+16+inch+M4+Max+128GB&tag=ardeevin-22",
       associateTag: "ardeevin-22"
     }
   },
