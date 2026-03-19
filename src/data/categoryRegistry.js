@@ -123,6 +123,7 @@ const _allGroups = [
       {
         slug: "tvs",
         name: "TVs & Streaming",
+        subgroup: "Home Entertainment",
         description: "OLED, mini-LED, and value 4K options with viewing-use recommendations.",
         audience: "Home theater buyers, families",
         status: "Coming soon",
@@ -135,8 +136,20 @@ const _allGroups = [
         ]
       },
       {
+        slug: "soundbars",
+        name: "Soundbars",
+        subgroup: "Home Entertainment",
+        description: "All-in-one and system soundbars for TV audio upgrades in any room size.",
+        audience: "Home theater starters, renters",
+        status: "Coming soon",
+        cadence: "Roadmap Q3",
+        scoreLabels: ["Value", "Reliability", "Sound Quality", "Features"],
+        subcategories: []
+      },
+      {
         slug: "smart-home",
         name: "Smart Home Devices",
+        subgroup: "Smart Home",
         description: "Security cams, smart speakers, and home automation picks that actually work.",
         audience: "Apartment and family homes",
         status: "Coming soon",
@@ -150,6 +163,7 @@ const _allGroups = [
       {
         slug: "robot-vacuums",
         name: "Robot Vacuums",
+        subgroup: "Smart Home",
         description: "Self-navigating vacuums and mops ranked by cleaning power and smart mapping.",
         audience: "Busy households, pet owners",
         status: "Coming soon",
@@ -158,18 +172,9 @@ const _allGroups = [
         subcategories: []
       },
       {
-        slug: "soundbars",
-        name: "Soundbars",
-        description: "All-in-one and system soundbars for TV audio upgrades in any room size.",
-        audience: "Home theater starters, renters",
-        status: "Coming soon",
-        cadence: "Roadmap Q3",
-        scoreLabels: ["Value", "Reliability", "Sound Quality", "Features"],
-        subcategories: []
-      },
-      {
         slug: "doorbells",
         name: "Video Doorbells",
+        subgroup: "Home Security",
         description: "Wired and battery video doorbells ranked by detection accuracy, video quality, and subscription value.",
         audience: "Homeowners and renters wanting front-door visibility",
         status: "Live",
@@ -180,6 +185,7 @@ const _allGroups = [
       {
         slug: "smart-locks",
         name: "Smart Locks",
+        subgroup: "Home Security",
         description: "Keypad, fingerprint, and app-controlled deadbolts ranked by security grade and ease of use.",
         audience: "Homeowners, renters, and Airbnb hosts",
         status: "Live",
@@ -190,6 +196,7 @@ const _allGroups = [
       {
         slug: "home-cameras",
         name: "Home Security Cameras",
+        subgroup: "Home Security",
         description: "Indoor and outdoor security cameras ranked by video clarity, AI detection, and total cost of ownership.",
         audience: "Homeowners and renters wanting 24/7 property monitoring",
         status: "Live",
