@@ -1,4 +1,9 @@
-function ProductCard({ product }) {
+const DEFAULT_LABELS = ["Value", "Reliability", "Sound", "Comfort"];
+const SCORE_KEYS = ["value", "reliability", "sound", "comfort"];
+
+function ProductCard({ product, scoreLabels }) {
+  const labels = scoreLabels || DEFAULT_LABELS;
+
   return (
     <article className="product-card">
       <header className="product-head">
@@ -19,10 +24,9 @@ function ProductCard({ product }) {
       <p className="editor-note">{product.editorialNote}</p>
 
       <div className="score-grid" aria-label="Score breakdown">
-        <p>Value: {product.score.value}</p>
-        <p>Reliability: {product.score.reliability}</p>
-        <p>Sound: {product.score.sound}</p>
-        <p>Comfort: {product.score.comfort}</p>
+        {SCORE_KEYS.map((key, i) => (
+          <p key={key}>{labels[i]}: {product.score[key]}</p>
+        ))}
       </div>
 
       <div className="pros-cons">

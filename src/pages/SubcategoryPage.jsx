@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import PriceBandTabs from "../components/PriceBandTabs";
 import ProductCard from "../components/ProductCard";
 
-function SubcategoryPage({ title, description, products, priceBands, rubric }) {
+function SubcategoryPage({ title, description, products, priceBands, rubric, eyebrow, scoreLabels }) {
   const [activeBand, setActiveBand] = useState(priceBands[0].id);
 
   const visibleProducts = useMemo(
@@ -17,7 +17,7 @@ function SubcategoryPage({ title, description, products, priceBands, rubric }) {
   return (
     <main>
       <section className="page-hero">
-        <p className="eyebrow">Headphones</p>
+        <p className="eyebrow">{eyebrow || "Products"}</p>
         <h1>{title}</h1>
         <p>{description}</p>
       </section>
@@ -34,7 +34,7 @@ function SubcategoryPage({ title, description, products, priceBands, rubric }) {
 
       <section className="product-list" aria-live="polite">
         {visibleProducts.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCard key={product.id} product={product} scoreLabels={scoreLabels} />
         ))}
       </section>
 

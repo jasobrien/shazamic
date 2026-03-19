@@ -1,47 +1,15 @@
-export const electronicsCategories = [
-  {
-    name: "Headphones & Earbuds",
-    description: "ANC, workout, travel, and office audio picks ranked by value and reliability.",
-    status: "Live",
-    cadence: "Updated every 30 days",
-    path: "/headphones"
-  },
-  {
-    name: "Smartphones",
-    description: "Best camera phones, battery champs, and flagship alternatives by budget.",
-    status: "Coming soon",
-    cadence: "Roadmap Q2",
-    path: ""
-  },
-  {
-    name: "Laptops",
-    description: "Portable workhorses, creator laptops, and student picks with clear trade-offs.",
-    status: "Coming soon",
-    cadence: "Roadmap Q2",
-    path: ""
-  },
-  {
-    name: "TVs & Streaming",
-    description: "OLED, mini-LED, and value 4K options with viewing-use recommendations.",
-    status: "Coming soon",
-    cadence: "Roadmap Q2",
-    path: ""
-  },
-  {
-    name: "Gaming Gear",
-    description: "Controllers, gaming headsets, and performance accessories for console and PC.",
-    status: "Coming soon",
-    cadence: "Roadmap Q3",
-    path: ""
-  },
-  {
-    name: "Smart Home Devices",
-    description: "Security cams, smart speakers, and home automation picks that actually work.",
-    status: "Coming soon",
-    cadence: "Roadmap Q3",
-    path: ""
-  }
-];
+import { categoryGroups, allCategories } from "./categoryRegistry";
+
+export { categoryGroups, allCategories };
+
+export const electronicsCategories = allCategories.map((cat) => ({
+  name: cat.name,
+  description: cat.description,
+  status: cat.status,
+  cadence: cat.cadence,
+  path: cat.status === "Live" ? `${cat.groupPath}/${cat.slug}` : "",
+  groupId: cat.groupId
+}));
 
 export const guideCards = [
   {

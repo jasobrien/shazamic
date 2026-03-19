@@ -3,9 +3,9 @@ import Hero from "../components/Hero";
 import TrustStrip from "../components/TrustStrip";
 import {
   dealWatch,
-  electronicsCategories,
   guideCards,
-  newsroomCards
+  newsroomCards,
+  categoryGroups
 } from "../data/electronicsHome";
 
 function HomePage() {
@@ -14,34 +14,37 @@ function HomePage() {
       <Hero />
       <TrustStrip />
 
-      <section className="electronics-section">
-        <div className="section-headline">
-          <p className="eyebrow">Customer Electronics Hub</p>
-          <h2>Browse high-intent electronics categories</h2>
-          <p>
-            Every category follows the same top-5 framework: clear scoring, practical trade-offs,
-            and transparent affiliate links.
-          </p>
-        </div>
+      {categoryGroups.map((group) => (
+        <section key={group.id} className="electronics-section">
+          <div className="section-headline">
+            <p className="eyebrow">{group.label}</p>
+            <h2>{group.label}</h2>
+            <p>{group.description}</p>
+          </div>
 
-        <div className="electronics-grid">
-          {electronicsCategories.map((item) => (
-            <article key={item.name} className="electronics-card">
-              <p className="electronics-status">{item.status}</p>
-              <h3>{item.name}</h3>
-              <p>{item.description}</p>
-              <p className="electronics-cadence">{item.cadence}</p>
-              {item.path ? (
-                <Link className="area-link" to={item.path}>
-                  View category
-                </Link>
-              ) : (
-                <span className="area-link is-disabled">Launching soon</span>
-              )}
-            </article>
-          ))}
-        </div>
-      </section>
+          <div className="electronics-grid">
+            {group.categories.map((item) => {
+              const isLive = item.status === "Live";
+              const path = isLive ? `${group.path}/${item.slug}` : "";
+              return (
+                <article key={item.slug} className="electronics-card">
+                  <p className="electronics-status">{item.status}</p>
+                  <h3>{item.name}</h3>
+                  <p>{item.description}</p>
+                  <p className="electronics-cadence">{item.cadence}</p>
+                  {path ? (
+                    <Link className="area-link" to={path}>
+                      View category
+                    </Link>
+                  ) : (
+                    <span className="area-link is-disabled">Launching soon</span>
+                  )}
+                </article>
+              );
+            })}
+          </div>
+        </section>
+      ))}
 
       <section className="content-columns">
         <article className="content-column">

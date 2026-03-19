@@ -1,85 +1,49 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import { allCategories } from "../data/categoryRegistry";
 
-const productAreas = [
-  {
-    name: "Headphones & Earbuds",
-    description: "Noise-canceling, workout, gaming, and travel audio recommendations.",
-    audience: "Commuters, students, remote workers",
-    path: "/headphones",
-    status: "Live now"
-  },
-  {
-    name: "Smartphones",
-    description: "Battery, camera, and value-focused comparisons for daily use.",
-    audience: "Everyday buyers, power users",
-    path: "",
-    status: "Next up"
-  },
-  {
-    name: "Laptops",
-    description: "Portable productivity, creator workstations, and student picks.",
-    audience: "Students, creators, professionals",
-    path: "",
-    status: "Roadmap"
-  },
-  {
-    name: "TVs & Streaming",
-    description: "Living-room setups and display picks by room size and budget.",
-    audience: "Home theater buyers",
-    path: "",
-    status: "Roadmap"
-  },
-  {
-    name: "Gaming Gear",
-    description: "Headsets, controllers, and accessories with real value signals.",
-    audience: "Console and PC gamers",
-    path: "",
-    status: "Roadmap"
-  },
-  {
-    name: "Smart Home",
-    description: "Reliable smart speakers, cameras, and connected-home essentials.",
-    audience: "Apartment and family homes",
-    path: "",
-    status: "Roadmap"
-  }
-];
+const productAreas = allCategories.map((cat) => ({
+  name: cat.name,
+  description: cat.description,
+  audience: cat.audience,
+  path: cat.status === "Live" ? `${cat.groupPath}/${cat.slug}` : "",
+  status: cat.status === "Live" ? "Live now" : cat.status === "Coming soon" ? "Next up" : "Roadmap"
+}));
 
 const spotlightProducts = [
   {
     name: "Sony WH-1000XM5",
     range: "Premium audio",
     detail: "$328 | reliability-first flagship",
-    path: "/headphones"
+    path: "/personal/headphones"
   },
   {
     name: "Sony WH-1000XM4",
     range: "Mid-range audio",
     detail: "$248 | strongest value-to-performance ratio",
-    path: "/headphones"
+    path: "/personal/headphones"
   },
   {
     name: "Soundcore Space One",
     range: "Budget audio",
     detail: "$99 | best sub-$100 ANC pick",
-    path: "/headphones"
+    path: "/personal/headphones"
   },
   {
     name: "Bose QuietComfort",
     range: "Comfort pick",
     detail: "$229 | top long-session comfort",
-    path: "/headphones"
+    path: "/personal/headphones"
   },
   {
-    name: "Smartphone Flagship Guide",
-    range: "Phones",
-    detail: "Camera + battery shootout",
+    name: "Best Coffee Makers 2026",
+    range: "Kitchen",
+    detail: "Drip, espresso, and pod picks",
     path: ""
   },
   {
     name: "Best 4K TVs Under $1,000",
-    range: "TVs",
+    range: "Common Areas",
     detail: "Panel quality and brightness ranking",
     path: ""
   }
@@ -167,7 +131,7 @@ function Hero() {
               </article>
             ))}
           </div>
-          <Link className="btn btn-primary entice-cta" to="/headphones">
+          <Link className="btn btn-primary entice-cta" to="/personal/headphones">
             Explore all headphone comparisons
           </Link>
         </aside>
