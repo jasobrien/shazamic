@@ -14,6 +14,9 @@ import { laptopsWindows } from "./personal/laptopsWindows";
 import { laptopsMacBook } from "./personal/laptopsMacBook";
 import { gamingHeadsets } from "./personal/gamingHeadsets";
 import { gamingControllers } from "./personal/gamingControllers";
+import { doorbells } from "./commonAreas/doorbells";
+import { smartLocks } from "./commonAreas/smartLocks";
+import { homeCameras } from "./commonAreas/homeCameras";
 
 const sources = [
   { products: overEar,            path: "/personal/headphones/over-ear",      listName: "Over-Ear Headphones" },
@@ -26,6 +29,9 @@ const sources = [
   { products: laptopsMacBook,     path: "/personal/laptops/macbook",           listName: "MacBooks" },
   { products: gamingHeadsets,     path: "/personal/gaming-gear/headsets",      listName: "Gaming Headsets" },
   { products: gamingControllers,  path: "/personal/gaming-gear/controllers",   listName: "Controllers" },
+  { products: doorbells,          path: "/common/doorbells",                    listName: "Video Doorbells" },
+  { products: smartLocks,         path: "/common/smart-locks",                  listName: "Smart Locks" },
+  { products: homeCameras,        path: "/common/home-cameras",                 listName: "Home Security Cameras" },
 ];
 
 export const allProducts = sources.flatMap(({ products, path, listName }) =>

@@ -24,6 +24,9 @@ import { laptopsWindows, PRICE_BANDS as windowsBands, rubric as windowsRubric } 
 import { laptopsMacBook, PRICE_BANDS as macbookBands, rubric as macbookRubric } from "./data/personal/laptopsMacBook";
 import { gamingHeadsets, PRICE_BANDS as headsetBands, rubric as headsetRubric } from "./data/personal/gamingHeadsets";
 import { gamingControllers, PRICE_BANDS as controllerBands, rubric as controllerRubric } from "./data/personal/gamingControllers";
+import { doorbells, PRICE_BANDS as doorbellBands, rubric as doorbellRubric } from "./data/commonAreas/doorbells";
+import { smartLocks, PRICE_BANDS as lockBands, rubric as lockRubric } from "./data/commonAreas/smartLocks";
+import { homeCameras, PRICE_BANDS as cameraBands, rubric as cameraRubric } from "./data/commonAreas/homeCameras";
 
 function App() {
   return (
@@ -203,6 +206,50 @@ function App() {
               priceBands={controllerBands}
               rubric={controllerRubric}
               scoreLabels={["Value", "Reliability", "Performance", "Comfort"]}
+            />
+          }
+        />
+
+        {/* Common area security & access pages */}
+        <Route
+          path="/common/doorbells"
+          element={
+            <SubcategoryPage
+              eyebrow="Home Security"
+              title="Video Doorbells"
+              description="Wired and battery video doorbells ranked by detection accuracy, video quality, and subscription value."
+              products={doorbells}
+              priceBands={doorbellBands}
+              rubric={doorbellRubric}
+              scoreLabels={["Value", "Reliability", "Video Quality", "Features"]}
+            />
+          }
+        />
+        <Route
+          path="/common/smart-locks"
+          element={
+            <SubcategoryPage
+              eyebrow="Home Security"
+              title="Smart Locks"
+              description="Keypad, fingerprint, and app-controlled deadbolts ranked by security grade and ease of use."
+              products={smartLocks}
+              priceBands={lockBands}
+              rubric={lockRubric}
+              scoreLabels={["Value", "Reliability", "Security", "Ease of Use"]}
+            />
+          }
+        />
+        <Route
+          path="/common/home-cameras"
+          element={
+            <SubcategoryPage
+              eyebrow="Home Security"
+              title="Home Security Cameras"
+              description="Indoor and outdoor security cameras ranked by video clarity, AI detection, and total cost of ownership."
+              products={homeCameras}
+              priceBands={cameraBands}
+              rubric={cameraRubric}
+              scoreLabels={["Value", "Reliability", "Video Quality", "Features"]}
             />
           }
         />

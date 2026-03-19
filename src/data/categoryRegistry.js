@@ -166,6 +166,36 @@ const _allGroups = [
         cadence: "Roadmap Q3",
         scoreLabels: ["Value", "Reliability", "Sound Quality", "Features"],
         subcategories: []
+      },
+      {
+        slug: "doorbells",
+        name: "Video Doorbells",
+        description: "Wired and battery video doorbells ranked by detection accuracy, video quality, and subscription value.",
+        audience: "Homeowners and renters wanting front-door visibility",
+        status: "Live",
+        cadence: "Updated every 30 days",
+        scoreLabels: ["Value", "Reliability", "Video Quality", "Features"],
+        subcategories: []
+      },
+      {
+        slug: "smart-locks",
+        name: "Smart Locks",
+        description: "Keypad, fingerprint, and app-controlled deadbolts ranked by security grade and ease of use.",
+        audience: "Homeowners, renters, and Airbnb hosts",
+        status: "Live",
+        cadence: "Updated every 30 days",
+        scoreLabels: ["Value", "Reliability", "Security", "Ease of Use"],
+        subcategories: []
+      },
+      {
+        slug: "home-cameras",
+        name: "Home Security Cameras",
+        description: "Indoor and outdoor security cameras ranked by video clarity, AI detection, and total cost of ownership.",
+        audience: "Homeowners and renters wanting 24/7 property monitoring",
+        status: "Live",
+        cadence: "Updated every 30 days",
+        scoreLabels: ["Value", "Reliability", "Video Quality", "Features"],
+        subcategories: []
       }
     ]
   }

@@ -31,6 +31,9 @@ export const featureFlags = {
       "smart-home": true,
       "robot-vacuums": true,
       soundbars: true,
+      doorbells: true,
+      "smart-locks": true,
+      "home-cameras": true,
     },
   },
 };
