@@ -6,7 +6,6 @@ export const electronicsCategories = allCategories.map((cat) => ({
   name: cat.name,
   description: cat.description,
   status: cat.status,
-  cadence: cat.cadence,
   path: cat.status === "Live" ? `${cat.groupPath}/${cat.slug}` : "",
   groupId: cat.groupId
 }));

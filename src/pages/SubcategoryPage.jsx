@@ -2,8 +2,8 @@ import { useMemo, useState } from "react";
 import PriceBandTabs from "../components/PriceBandTabs";
 import ProductCard from "../components/ProductCard";
 
-function SubcategoryPage({ title, description, products, priceBands, rubric, eyebrow, scoreLabels }) {
-  const [activeBand, setActiveBand] = useState(priceBands[0].id);
+function SubcategoryPage({ title, description, products = [], priceBands = [], rubric = [], eyebrow, scoreLabels }) {
+  const [activeBand, setActiveBand] = useState(priceBands[0]?.id || "budget");
 
   const visibleProducts = useMemo(
     () =>
@@ -14,6 +14,21 @@ function SubcategoryPage({ title, description, products, priceBands, rubric, eye
     [activeBand, products]
   );
 
+  if (!products.length) {
+    return (
+      <main>
+        <section className="page-hero">
+          <p className="eyebrow">{eyebrow || "Products"}</p>
+          <h1>{title}</h1>
+          <p>{description}</p>
+        </section>
+        <section className="coming-soon">
+          <p>Product rankings are coming soon. Check back shortly.</p>
+        </section>
+      </main>
+    );
+  }
+
   return (
     <main>
       <section className="page-hero">
@@ -22,15 +37,14 @@ function SubcategoryPage({ title, description, products, priceBands, rubric, eye
         <p>{description}</p>
       </section>
 
-      <PriceBandTabs
-        bands={priceBands}
-        activeBand={activeBand}
-        onBandChange={setActiveBand}
-      />
-
-      <section className="list-meta">
-        <p>Showing the top 5 picks in this price band, sorted by overall recommendation rank.</p>
-      </section>
+      <div className="band-row">
+        <PriceBandTabs
+          bands={priceBands}
+          activeBand={activeBand}
+          onBandChange={setActiveBand}
+        />
+        <span className="band-meta">Showing the top 5 picks in this price band, sorted by overall recommendation rank.</span>
+      </div>
 
       <section className="product-list" aria-live="polite">
         {visibleProducts.map((product) => (
@@ -38,14 +52,16 @@ function SubcategoryPage({ title, description, products, priceBands, rubric, eye
         ))}
       </section>
 
-      <section className="rubric">
-        <h2>How this ranking works</h2>
-        <ul>
-          {rubric.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      </section>
+      {rubric.length > 0 && (
+        <section className="rubric">
+          <h2>How this ranking works</h2>
+          <ul>
+            {rubric.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </section>
+      )}
     </main>
   );
 }

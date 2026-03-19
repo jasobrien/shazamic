@@ -26,12 +26,10 @@ function GroupHub({ groupId }) {
               className={`subcategory-card${isLive ? "" : " is-disabled"}`}
               {...linkProps}
             >
-              <p className="subcategory-status">{cat.status}</p>
               <h2>{cat.name}</h2>
               <p>{cat.description}</p>
-              <p className="electronics-cadence">{cat.cadence}</p>
               <span className="subcategory-cta">
-                {isLive ? "Browse categories →" : "Launching soon"}
+                {isLive ? "Browse picks →" : "Launching soon"}
               </span>
             </Tag>
           );

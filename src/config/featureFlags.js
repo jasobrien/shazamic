@@ -11,7 +11,8 @@ export const featureFlags = {
   groups: {
     personal: true,
     kitchen: true,
-    common: true,
+    entertainment: true,
+    "smart-home": true,
   },
 
   categories: {
@@ -26,14 +27,16 @@ export const featureFlags = {
       "air-fryers": true,
       blenders: true,
     },
-    common: {
+    entertainment: {
       tvs: true,
-      "smart-home": true,
-      "robot-vacuums": true,
       soundbars: true,
+    },
+    "smart-home": {
       doorbells: true,
       "smart-locks": true,
       "home-cameras": true,
+      "smart-home-devices": true,
+      "robot-vacuums": true,
     },
   },
 };

@@ -49,7 +49,7 @@ export const sports = [
       "At this price, the secure fit and sweat resistance make these a gym essential.",
     affiliate: {
       retailer: "Amazon",
-      url: "https://www.amazon.com/dp/B09392Q2NQ?tag=ardeevin-22",
+      url: "https://www.amazon.com/dp/B09B1V6X2F?tag=ardeevin-22",
       associateTag: "ardeevin-22"
     }
   },

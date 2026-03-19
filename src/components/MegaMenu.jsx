@@ -12,7 +12,6 @@ function CatCard({ cat, groupPath, onClose }) {
           className="mega-cat-link"
           onClick={onClose}
         >
-          <span className="mega-cat-status">{cat.status}</span>
           <strong>{cat.name}</strong>
           <span className="mega-cat-desc">{cat.description}</span>
         </Link>
@@ -27,9 +26,11 @@ function CatCard({ cat, groupPath, onClose }) {
   );
 }
 
+
 function MegaMenu() {
   const [openGroup, setOpenGroup] = useState(null);
   const menuRef = useRef(null);
+  const closeTimeout = useRef();
 
   useEffect(() => {
     function handleClickOutside(e) {
@@ -47,6 +48,20 @@ function MegaMenu() {
       e.preventDefault();
       setOpenGroup(openGroup === groupId ? null : groupId);
     }
+  }
+
+  function handleMouseEnter(groupId) {
+    if (closeTimeout.current) {
+      clearTimeout(closeTimeout.current);
+      closeTimeout.current = null;
+    }
+    setOpenGroup(groupId);
+  }
+
+  function handleMouseLeave() {
+    closeTimeout.current = setTimeout(() => {
+      setOpenGroup(null);
+    }, 180);
   }
 
   return (
@@ -72,8 +87,8 @@ function MegaMenu() {
           <div
             key={group.id}
             className="mega-menu-group"
-            onMouseEnter={() => setOpenGroup(group.id)}
-            onMouseLeave={() => setOpenGroup(null)}
+            onMouseEnter={() => handleMouseEnter(group.id)}
+            onMouseLeave={handleMouseLeave}
           >
             <button
               type="button"
